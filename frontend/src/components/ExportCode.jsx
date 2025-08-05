@@ -27,7 +27,7 @@ export default function ExportCode({ classString, componentType }) {
         <span className="text-slate-300 font-mono">JSX Code</span>
         <button
           onClick={copyCode}
-          className="px-3 py-1 rounded text-sm bg-blue-500 text-white font-semibold hover:bg-blue-600"
+          className="px-3 py-1 rounded text-sm bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-all"
         >
           {copied ? "Copied!" : "Copy"}
         </button>

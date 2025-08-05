@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+@layer utilities {
+ .animate-fadeIn {
+    animation: fadeIn 0.7s cubic-bezier(0.32, 0, 0.67, 0) both;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px);}
+  to   { opacity: 1; transform: none;}
+}
+
+/* Optionally, custom scrollbar styles (if using saved components with lots of scroll) */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+.scrollbar-thumb-slate-700\/80::-webkit-scrollbar-thumb {
+  background: #334155cc;
+  border-radius: 10px;
+}
