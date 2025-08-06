@@ -1,9 +1,11 @@
 import RightPanel from "./components/Rightpanel";
 import DragBall from "./components/Dragball";
+import { useNavigate } from "react-router-dom";
 
-export default function Home({ onStart }) {
+export default function Home() {
+  const navigate = useNavigate();
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-gradient-to-br from-[#181928] via-[#232f42] to-[#13111c]">
       <DragBall />
 
       <div className="min-h-screen w-full flex flex-col md:flex-row ">
@@ -18,18 +20,20 @@ export default function Home({ onStart }) {
             </p>
             <div className="flex flex-row gap-5">
               <button
-                onClick={onStart}
+                onClick={() => navigate('/playground')}
                 className="px-8 py-3 rounded-2xl font-bold text-xl bg-gradient-to-r from-blue-600 to-fuchsia-500 text-white shadow-lg hover:scale-105 hover:shadow-fuchsia-600/40 transition-all duration-200"
               >
                 🚀 Get Started
               </button>
-              <button
-                onClick={onStart}
-                className="px-8 py-3 rounded-2xl font-bold text-xl border-2 border-yellow-400
+              <a href="https://github.com/UKbhatt/TwiddleUI" target="_blank"
+                rel="noopener noreferrer">
+                <button
+                  className="px-8 py-3 rounded-2xl font-bold text-xl border-2 border-yellow-400
                 text-white hover:bg-yellow-400 hover:text-black"
-              >
-                ⭐ Give a Star
-              </button>
+                >
+                  ⭐ Give a Star
+                </button>
+              </a>
             </div>
             <div className="pt-4 text-xs text-slate-400">
               Made with <span className="text-fuchsia-400">♥</span> by a Developer for a Developer
