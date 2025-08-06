@@ -116,7 +116,7 @@ export default function Playground() {
           </div>
         </div>
         <footer className="w-full py-6 mt-8 text-center text-xs text-slate-500">
-          Made with <span className="text-fuchsia-400">❤</span> | Tailwind Playground &copy; {new Date().getFullYear()}
+          Made with <span className="text-fuchsia-400">❤</span> | TwiddleUI Playground &copy; {new Date().getFullYear()}
         </footer>
       </div>
     </div>
